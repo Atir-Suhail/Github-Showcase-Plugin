@@ -8,7 +8,7 @@ const GitHubUser = ({ username }) => {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const username = "JasimDAce";
+      const username = "Atir-Suhail";
       try {
         const response = await axios.get(
           `https://api.github.com/users/${username}`
@@ -30,7 +30,7 @@ const GitHubUser = ({ username }) => {
   return (
     <div>
       <h1>{user.name}</h1>
-      <p>Username: {user.login}</p>
+      <p className="">Username: {user.login}</p>
       <p>Bio: {user.bio}</p>
       <p>Location: {user.location}</p>
       <p>Public Repos: {user.public_repos}</p>

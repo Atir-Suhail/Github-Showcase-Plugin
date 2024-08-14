@@ -1,6 +1,5 @@
 const express = require("express");
-const userRouter = require("./routers/UserRouter");
-const product = require("./routers/product");
+const product = require("./routers/Router");
 
 const cors = require("cors");
 
@@ -14,9 +13,8 @@ app.use(
   })
 );
 app.use(express.json());
-app.use("/user", userRouter);
-app.use(express.json());
-app.use("/user", product);
+app.use("/user", Router);
+
 
 app.listen(port, () => {
   console.log(" server started");
