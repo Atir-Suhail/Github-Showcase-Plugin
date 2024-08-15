@@ -14,6 +14,7 @@ const GitHubUser = ({ username }) => {
           `https://api.github.com/users/${username}`
         );
         setUser(response.data);
+        
       } catch (error) {
         setError(error);
       } finally {
