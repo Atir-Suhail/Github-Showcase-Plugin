@@ -14,13 +14,13 @@ const GitHubUser = ({ username }) => {
           `https://api.github.com/users/${username}`
         );
         setUser(response.data);
-        
       } catch (error) {
         setError(error);
       } finally {
         setLoading(false);
       }
     };
+
 
     fetchUser();
   }, [username]);
@@ -29,9 +29,9 @@ const GitHubUser = ({ username }) => {
   if (error) return <div>Error: {error.message}</div>;
 
   return (
-    <div>
-      <h1>{user.name}</h1>
-      <p className="">Username: {user.login}</p>
+    <div className="header">
+      <h1 >{user.name}</h1>
+      <p>Username: {user.login}</p>
       <p>Bio: {user.bio}</p>
       <p>Location: {user.location}</p>
       <p>Public Repos: {user.public_repos}</p>
