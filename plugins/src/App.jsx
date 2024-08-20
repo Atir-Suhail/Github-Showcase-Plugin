@@ -3,7 +3,7 @@ import GitHubUser from './UserDetails'
 
 const App = () => {
   return (
-    <div>
+    <div className='mainComponent'>
       <GitHubUser />
     </div>
   )
